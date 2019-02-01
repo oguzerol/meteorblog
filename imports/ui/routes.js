@@ -1,7 +1,12 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router';
+import { Router, Switch } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
 
+import { AppRoute } from './lib/layoutUtils';
+
+// Layouts
+import { baseLayout } from './layout/baseLayout';
+// Pages
 import HomePage from './pages/homepage';
 import About from './pages/about';
 import NoMatch from './pages/nomatch';
@@ -12,9 +17,9 @@ export const renderRoutes = () => {
   return (
     <Router history={browserHistory}>
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/about" component={About} />
-        <Route component={NoMatch} />
+        <AppRoute exact path="/" layout={baseLayout} component={HomePage} />
+        <AppRoute exact path="/about" layout={baseLayout} component={About} />
+        <AppRoute component={NoMatch} />
       </Switch>
     </Router>
   );
