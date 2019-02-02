@@ -14,8 +14,21 @@ export const App = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
+        <title> Oguz EROL - Official Website. </title>
+        <meta charset="utf-8" />
         <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+        <meta
+          name="description"
+          content="Learn more Oguz EROL, his projects, interests and experience."
+        />
+        <meta name="language" content="english" />
+        <meta http-equiv="content-type" content="text/html" />
+        <meta name="author" content="Oguz EROL" />
+        <meta name="designer" content="Oguz EROL" />
+        <meta name="publisher" content="Oguz EROL" />
+        <meta name="keywords" content="Front End Developer" />
+        <meta name="subject" content="Personal" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <Router history={browserHistory}>{renderRoutes()}</Router>
     </>
