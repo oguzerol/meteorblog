@@ -1,14 +1,23 @@
 import React from 'react';
 import { Router } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
+import { Helmet } from 'react-helmet';
 
 import { renderRoutes } from './routes';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../client/bootstrap.min.css';
 import './main.scss';
 
 const browserHistory = createBrowserHistory();
 
 export const App = () => {
-  return <Router history={browserHistory}>{renderRoutes()}</Router>;
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+      </Helmet>
+      <Router history={browserHistory}>{renderRoutes()}</Router>
+    </>
+  );
 };

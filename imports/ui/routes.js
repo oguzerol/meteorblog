@@ -8,9 +8,9 @@ import { BaseLayout } from './layout/BaseLayout';
 import { EmptyLayout } from './layout/EmptyLayout';
 
 // Pages
-import HomePage from './pages/homepage';
-import About from './pages/about';
-import NoMatch from './pages/nomatch';
+import HomePage from './pages/Homepage';
+import About from './pages/About';
+import NoMatch from './pages/NoMatch';
 
 export const renderRoutes = () => {
   return (
