@@ -9,7 +9,7 @@ export default class HomePage extends React.Component {
           <title>Home Page</title>
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
-        <div>Homepage</div>
+        <div className="container">test</div>
       </>
     );
   }

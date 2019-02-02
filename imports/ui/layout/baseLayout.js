@@ -1,9 +1,12 @@
 import React from 'react';
 
-export const baseLayout = props => (
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+
+export const BaseLayout = props => (
   <div>
-    <h1>Header</h1>
+    <Header />
     {props.children}
-    <h1>footer</h1>
+    <Footer />
   </div>
-)
+);

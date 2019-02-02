@@ -4,7 +4,8 @@ import createBrowserHistory from 'history/createBrowserHistory';
 
 import { renderRoutes } from './routes';
 
-import './test.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './main.scss';
 
 const browserHistory = createBrowserHistory();
 
