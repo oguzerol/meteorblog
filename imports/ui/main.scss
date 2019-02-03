@@ -1,6 +1,14 @@
 body {
   min-height: 100vh;
 }
+p {
+  margin-bottom: 0;
+}
 
+// Components
 @import '../ui/components/header/header.scss';
 @import '../ui/components/footer/footer.scss';
+
+// Pages
+
+@import '../ui/pages/account/account.scss';
