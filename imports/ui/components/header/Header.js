@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import {
   Container,
@@ -11,7 +12,7 @@ import {
   NavLink
 } from 'reactstrap';
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
 
@@ -38,7 +39,7 @@ export default class Header extends React.Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <NavLink tag={Link} to="/about">
-                    About
+                    {this.props.name}
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -54,3 +55,7 @@ export default class Header extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  name: state.form.name
+}))(Header);

@@ -1,8 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-export default class HomePage extends React.Component {
+import { handleChangeName } from '../../actions/index';
+
+class HomePage extends React.Component {
+  handleChangeName = e => {
+    const name = e.target.value;
+    this.props.actions.handleChangeName(name);
+  };
+
   render() {
+    const { name } = this.props;
     return (
       <>
         <Helmet>
@@ -11,8 +21,22 @@ export default class HomePage extends React.Component {
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
 
-        <div className="container">test</div>
+        <div className="container">
+          <div className="form-container">
+            <p>Your Name: {name}</p>
+            <input type="text" onChange={this.handleChangeName} />
+          </div>
+        </div>
       </>
     );
   }
 }
+
+export default connect(
+  state => ({
+    name: state.form.name
+  }),
+  dispatch => ({
+    actions: bindActionCreators({ handleChangeName }, dispatch)
+  })
+)(HomePage);

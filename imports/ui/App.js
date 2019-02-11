@@ -1,6 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
 import { Router } from 'react-router';
 import createBrowserHistory from 'history/createBrowserHistory';
+
 import { Helmet } from 'react-helmet';
 
 import { renderRoutes } from './routes';
@@ -30,7 +33,9 @@ export const App = () => {
         <meta name="subject" content="Personal" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
-      <Router history={browserHistory}>{renderRoutes()}</Router>
+      <Provider store={store}>
+        <Router history={browserHistory}>{renderRoutes()}</Router>
+      </Provider>
     </>
   );
 };
