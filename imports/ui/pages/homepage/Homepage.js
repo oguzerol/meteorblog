@@ -6,10 +6,12 @@ export default class HomePage extends React.Component {
     return (
       <>
         <Helmet>
+          <meta charSet="utf-8" />
           <title>Home Page</title>
+          <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
 
-        <div className="container">Homepage</div>
+        <div className="container">test</div>
       </>
     );
   }

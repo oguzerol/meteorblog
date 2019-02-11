@@ -17,7 +17,7 @@ export default class Account extends Component {
 
   handleLogout = e => {
     e.preventDefault();
-    Meteor.logout(this.props.history.push('/login'));
+    Meteor.logout(this.props.history.push('/'));
   };
 
   render() {
