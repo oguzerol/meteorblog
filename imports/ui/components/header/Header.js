@@ -39,7 +39,7 @@ class Header extends React.Component {
               <Nav className="ml-auto" navbar>
                 <NavItem>
                   <NavLink tag={Link} to="/about">
-                    {this.props.name}
+                    About
                   </NavLink>
                 </NavItem>
                 <NavItem>

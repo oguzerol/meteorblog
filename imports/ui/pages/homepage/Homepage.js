@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { bindActionCreators } from 'redux';
 import { withTracker } from 'meteor/react-meteor-data';
 
 import { Posts } from '../../../api/posts';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch } from 'react-router';
 
-import { AppRoute } from './lib/layoutUtils';
+import { AppRoute } from './helpers/layoutUtils';
 
 // Layouts
 import { BaseLayout } from './layout/BaseLayout';
@@ -18,7 +18,13 @@ export const renderRoutes = () => {
     <Switch>
       <AppRoute exact path="/" layout={BaseLayout} component={HomePage} />
       <AppRoute exact path="/login" layout={BaseLayout} component={Account} />
-      <AppRoute exact path="/about" layout={BaseLayout} component={About} />
+      <AppRoute
+        private
+        exact
+        path="/about"
+        layout={BaseLayout}
+        component={About}
+      />
       <AppRoute layout={EmptyLayout} component={NoMatch} />
     </Switch>
   );
